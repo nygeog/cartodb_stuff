@@ -1,0 +1,8 @@
+https://common-data.cartodb.com/api/v2/sql?q=select%20*%20from%20public.gdeltgkg_cartodb_hourly%20LIMIT%2010&format=geojson&filename=test999
+
+
+
+https://common-data.cartodb.com:443/api/v2/sql?q=select * from public.tl_2014_census_tracts
+
+
+https://common-data.cartodb.com:443/api/v2/sql?q=select%20*%20from%20public.tl_2014_census_tracts%20WHERE%20statefp%20=%20'36'&format=geojson&filename=NYStateTractsTest
