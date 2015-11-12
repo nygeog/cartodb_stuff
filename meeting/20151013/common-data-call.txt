@@ -6,3 +6,42 @@ https://common-data.cartodb.com:443/api/v2/sql?q=select * from public.tl_2014_ce
 
 
 https://common-data.cartodb.com:443/api/v2/sql?q=select%20*%20from%20public.tl_2014_census_tracts%20WHERE%20statefp%20=%20'36'&format=geojson&filename=NYStateTractsTest
+
+
+https://common-data.cartodb.com:443/api/v2/sql?q=select * from public.tl_2014_census_tracts LIMIT 10 & format=csv & filename=NYStateTractsTest
+
+https://common-data.cartodb.com:443/api/v2/sql?q=select geoid from public.tl_2014_census_tracts WHERE ST_Intersection(ST_GeometryFromText('POINT(40.758871 -73.985114)'), public.tl_2014_census_tracts) LIMIT 10 & format=json
+
+CREATE TABLE latlngtablebufferintersect_"+fd+" AS (
+
+SELECT  ST_Intersection(a.the_geom, b.the_geom), a.geoid, a.ct10sqmtr, b.cdbawcensusuid 
+
+FROM "+censusFeature+" as a, latlngtablebuffer_"+fd+" as b 
+
+WHERE ST_Intersects(a.the_geom, b.the_geom))
+
+",
+
+
+SELECT ST_Intersection(a.the_geom, b.the_geom), a.geoid
+FROM public.tl_2014_census_tracts as a, ST_GeometryFromText('POINT(40.758871 -73.985114)') as b
+WHERE ST_Intersects(a.the_geom, b.the_geom)
+
+
+https://common-data.cartodb.com:443/api/v2/sql?q=SELECT ST_Intersection(a.the_geom, ST_GeometryFromText('POINT(40.758871 -73.985114)')), a.geoid FROM public.tl_2014_census_tracts as a WHERE ST_Intersects(a.the_geom, ST_GeometryFromText('POINT(40.758871 -73.985114)')) & format=json
+
+
+
+LIMIT 10 & format=json
+
+https://common-data.cartodb.com:443/api/v2/sql?q=SELECT ST_Intersection(a.the_geom, ST_GeometryFromText('POINT(40.758871 -73.985114)')), a.geoid FROM public.tl_2014_census_tracts as a & format=geojson
+
+
+https://common-data.cartodb.com:443/api/v2/sql?q=SELECT ST_Intersection(a.the_geom, ST_GeometryFromText('POINT(40.758871 -73.985114),4326')), a.geoid FROM public.tl_2014_census_tracts as a & format=geojson
+
+
+
+
+https://common-data.cartodb.com/api/v2/sql?q=SELECT%20ST_Intersection(a.the_geom,%20ST_GeometryFromText(%27POINT(40.758871%20-73.985114)%27,4326)),%20a.geoid%20FROM%20public.tl_2014_census_tracts%20as%20a%20&%20format=geojson
+
+

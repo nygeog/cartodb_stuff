@@ -1,0 +1,40 @@
+https://common-data.cartodb.com/api/v2/sql?q=
+SELECT ST_Intersection(a.the_geom, ST_GeometryFromText('POINT(40.758871 -73.985114)',4326)), 
+a.geoid FROM public.tl_2014_census_tracts as a & format=geojson
+
+
+
+https://common-data.cartodb.com/api/v2/sql?q=SELECT ST_Intersects(a.the_geom, ST_GeometryFromText('POINT(40.758871 -73.985114)',4326)), a.geoid FROM public.tl_2014_census_tracts as a & format=geojson
+
+https://common-data.cartodb.com/api/v2/sql?q=SELECT ST_Intersects(a.the_geom, ST_GeometryFromText('POINT(40.758871 -73.985114)')), a.geoid FROM public.tl_2014_census_tracts as a & format=geojson
+
+https://common-data.cartodb.com/api/v2/sql?q=
+SELECT regions.name 
+FROM regions
+WHERE ST_Intersects((ST_PointFromText('POINT(40.758871 -73.985114)', 4269)), regions.geom);
+
+
+ST_PointFromText('POINT(-73.985114 40.758871)', 4326);
+
+
+https://common-data.cartodb.com/api/v2/sql?q=SELECT ST_Intersection(a.the_geom, ST_PointFromText('POINT(-73.985114 40.758871)', 4326), a.geoid FROM public.tl_2014_census_tracts as a & format=geojson
+
+
+https://common-data.cartodb.com/api/v2/sql?q=SELECT ST_Intersects(a.the_geom, ST_GeometryFromText('POINT(-73.985114 40.758871')), a.geoid FROM public.tl_2014_census_tracts as a & format=geojson
+
+https://common-data.cartodb.com/api/v2/sql?q=SELECT Find_SRID(public.tl_2014_census_tracts);find_srid
+
+select geoid
+from public.tl_2014_census_tracts where
+st_intersection(the_geom,st_GeomFromText('POINT(-73.985114 40.758871)', 4326))
+
+st_GeomFromText('POINT(-58.3778105 -34.6077041)', 4326)
+
+
+https://common-data.cartodb.com/api/v2/sql?q=select geoid from public.tl_2014_census_tracts where st_intersects(the_geom,st_GeomFromText('POINT(-73.985114 40.758871)', 4326))
+
+
+
+https://common-data.cartodb.com/api/v2/sql?q=select geoid from public.tl_2014_census_tracts where st_intersects(the_geom,st_GeomFromText('POINT(-73.9521830 40.7186990)', 4326)) & format=geojson
+
+,
