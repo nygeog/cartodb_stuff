@@ -1,4 +1,4 @@
-#Big Stuff, Where I want to go. 
+#Stuff
 Where you want to go from where you are now. 
 
 * Learn more JavaScript. Learn the fundamentals. Take a General Assembly JavaScript Course. 
@@ -20,3 +20,13 @@ Where you want to go from where you are now.
 * Use more statistics. Do a side-project analysis. Use statistics to frame an argument. 
 
 * Generate new teaching materials. Consider creating new material based off of open source data. Make the material applied that builds on itself like a project. 
+
+
+#For interview process
+
+* Coding assignment. 
+
+* Teaching example.
+
+* Contribution to open source.
+
