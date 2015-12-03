@@ -38,3 +38,8 @@ https://common-data.cartodb.com/api/v2/sql?q=select geoid from public.tl_2014_ce
 https://common-data.cartodb.com/api/v2/sql?q=select geoid from public.tl_2014_census_tracts where st_intersects(the_geom,st_GeomFromText('POINT(-73.9521830 40.7186990)', 4326)) & format=geojson
 
 ,
+
+
+https://googledata.cartodb.com:443/api/v2/sql?q=select * from googledata.gopanimation1
+
+https://googledata.cartodb.com:443/api/v2/sql?q=select * from geometry_columns
