@@ -1,0 +1,7 @@
+http://blog.cartodb.com/better-common-data/
+
+The common data link here is broken. It points to http://docs.cartodb.com/cartodb-editor/
+
+
+
+Perhaps you’re familiar with our common data page from your dashboard. Examples of data you may find there include World Borders, European Countries, Urban Areas, and Populated Places. The idea is for you to add a table from the list to your dashboard and start mapping it to suit your story.
