@@ -1,0 +1,17 @@
+https://{username}.carto.com/api/v2/sql?q=SELECT count(*) FROM {table_name}
+
+
+https://{username}.carto.com/api/v2/sql?q=UPDATE test_table SET column_name = 'my new string value' WHERE cartodb_id = 1 &api_key={api_key}
+
+https://nygeog.carto.com/api/v2/sql?q=UPDATE all_paratransit_cb_pd_pairs_osrm_line_utm18n_pts_wgs84_1mil set the_geom = CDB_LatLng(st_y, st_x)&api_key=4afbc252f49ea8a83920e2378df77fbe0a58a806
+
+
+
+def check_job(job_id):
+   return requests.get(base_url+'/'+job_id+'?api_key='+key).json()
+
+base_url = 'https://nygeog.cartodb.com/api/v2/sql/job'
+key = '4afbc252f49ea8a83920e2378df77fbe0a58a806'
+
+def list_jobs():
+   return requests.get(base_url+'/?api_key='+key).json()

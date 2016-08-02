@@ -1,0 +1,41 @@
+Last login: Fri Jul 29 16:22:35 on ttys000
+MacBook-Pro-5:~ danielmsheehan$ ipython
+Python 2.7.8 (default, Sep 18 2014, 14:18:25) 
+Type "copyright", "credits" or "license" for more information.
+
+IPython 3.2.1 -- An enhanced Interactive Python.
+?         -> Introduction and overview of IPython's features.
+%quickref -> Quick reference.
+help      -> Python's own help system.
+object?   -> Details about 'object', use 'object??' for extra details.
+
+In [1]: 
+
+In [1]: import json 
+
+In [2]: import pandas as pd
+
+In [3]: from urllib import urlencode
+
+In [4]: import requests
+
+In [5]: base_url = 'https://nygeog.cartodb.com/api/v2/sql/job'
+
+In [6]: key = '4afbc252f49ea8a83920e2378df77fbe0a58a806'
+
+In [7]: def list_jobs():
+   ...:        return requests.get(base_url+'/?api_key='+key).json()
+   ...: 
+
+In [8]: list_jobs()
+/usr/local/lib/python2.7/site-packages/requests/packages/urllib3/util/ssl_.py:100: InsecurePlatformWarning: A true SSLContext object is not available. This prevents urllib3 from configuring SSL appropriately and may cause certain SSL connections to fail. For more information, see https://urllib3.readthedocs.org/en/latest/security.html#insecureplatformwarning.
+  InsecurePlatformWarning
+Out[8]: 
+[{u'created_at': u'2016-07-29T21:51:21.294Z',
+  u'job_id': u'63fd6eb6-a40e-40da-bde5-12438cd6616d',
+  u'query': u'UPDATE all_paratransit_cb_pd_pairs_osrm_line_utm18n_pts_wgs84_1mil set the_geom = CDB_LatLng(st_y, st_x)\n',
+  u'status': u'running',
+  u'updated_at': u'2016-07-29T21:51:21.303Z',
+  u'user': u'nygeog'}]
+
+In [9]: 
