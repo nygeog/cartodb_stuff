@@ -21,7 +21,7 @@ In [4]: import requests
 
 In [5]: base_url = 'https://nygeog.cartodb.com/api/v2/sql/job'
 
-In [6]: key = '4afbc252f49ea8a83920e2378df77fbe0a58a806'
+In [6]: key = '{api_key}'
 
 In [7]: def list_jobs():
    ...:        return requests.get(base_url+'/?api_key='+key).json()
